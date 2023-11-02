@@ -1,8 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/mdx/page": "app/mdx/page.js",
-  "/tremor/page": "app/tremor/page.js",
-  "/testdb/page": "app/testdb/page.js",
-  "/testdb/revalidate/page": "app/testdb/revalidate/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js"
-}
