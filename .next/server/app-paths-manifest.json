@@ -1,0 +1,4 @@
+{
+  "/api/hello/route": "app/api/hello/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}
