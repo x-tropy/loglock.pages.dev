@@ -79,3 +79,5 @@ export default async function DisplayProject({ params: { id } }) {
 		</>
 	)
 }
+
+export const runtime = "edge"

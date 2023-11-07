@@ -70,3 +70,5 @@ export default async function DisplayExperiment({ params: { id } }) {
 		</>
 	)
 }
+
+export const runtime = "edge"

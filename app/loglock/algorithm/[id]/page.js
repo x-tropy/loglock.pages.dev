@@ -10,3 +10,5 @@ export default async function DisplayAlgorithm({ params: { id } }) {
 		</>
 	)
 }
+
+export const runtime = "edge"
