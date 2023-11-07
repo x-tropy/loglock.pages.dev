@@ -1,6 +1,5 @@
 <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_98_29)">
-<rect width="140" height="32" fill="white"/>
 <path d="M55 7V6C55 5.46957 55.2107 4.96086 55.5858 4.58579C55.9609 4.21071 56.4696 4 57 4H65.5L71 9.5V22C71 22.5304 70.7893 23.0391 70.4142 23.4142C70.0391 23.7893 69.5304 24 69 24H55" stroke="#FFA216" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M65 4V10H71" stroke="#FFA216" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M60 15H54C53.4477 15 53 15.4477 53 16V19C53 19.5523 53.4477 20 54 20H60C60.5523 20 61 19.5523 61 19V16C61 15.4477 60.5523 15 60 15Z" stroke="#F03E06" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

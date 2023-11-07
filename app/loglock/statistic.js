@@ -1,3 +1,4 @@
+"use client"
 import { BadgeDelta, LineChart, Legend, DonutChart, Card, Flex, Grid, Metric, TabPanel, Text, Title, Subtitle, BarChart } from "@tremor/react"
 
 export default function Statistic() {

@@ -25,4 +25,5 @@ const nextConfig = {
 	}
 }
 
-module.exports = withMDX(nextConfig)
+const removeImports = require("next-remove-imports")()
+module.exports = withMDX(removeImports(nextConfig))

@@ -1,3 +1,5 @@
+"use client"
+
 import { useState } from "react"
 import {
 	Divider,
@@ -16,17 +18,13 @@ import {
 	Col,
 	Title,
 	Text,
-	Tab,
-	TabList,
-	TabGroup,
 	TabPanel,
-	TabPanels,
 	Badge,
 	SelectItem,
 	TextInput
 } from "@tremor/react"
 import { SearchIcon, OfficeBuildingIcon, LockClosedIcon, BookOpenIcon } from "@heroicons/react/outline"
-import Router from "next/router"
+import Link from "next/link"
 
 export default function ProjectList({ data }) {
 	const [projectType, setProjectType] = useState("")
@@ -83,7 +81,12 @@ export default function ProjectList({ data }) {
 							<TableRow key={i}>
 								<TableCell>{item.projectAcronym}</TableCell>
 								<TableCell>
-									<Text>{item.projectTitle}</Text>
+									<Text>
+										{
+											// truncate long text, and show full text on hover
+											item.projectTitle.length > 60 ? item.projectTitle.substring(0, 60) + "..." : item.projectTitle
+										}
+									</Text>
 								</TableCell>
 								<TableCell>
 									<Badge color='blue' icon={item.projectType == "Private" ? LockClosedIcon : BookOpenIcon}>
@@ -91,14 +94,18 @@ export default function ProjectList({ data }) {
 									</Badge>
 								</TableCell>
 								<TableCell className='gap-5'>
-									<Button size='xs' variant='secondary' color='gray' onClick={() => Router.push(`${item.projectURL}`)}>
-										Visit project
-									</Button>
+									<Link href={`/loglock/project/${item.projectURL}`}>
+										<Button size='xs' variant='secondary' color='gray'>
+											Visit project
+										</Button>
+									</Link>
 								</TableCell>
 								<TableCell>
-									<Button size='xs' variant='secondary' color='gray' onClick={() => Router.push(`${item.experimentURL}`)}>
-										Visit experiment
-									</Button>
+									<Link href={`/loglock/experiment/${item.experimentURL}`}>
+										<Button size='xs' variant='secondary' color='gray'>
+											Visit experiment
+										</Button>
+									</Link>
 								</TableCell>
 							</TableRow>
 						))}
