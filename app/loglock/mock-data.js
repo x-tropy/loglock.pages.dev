@@ -286,3 +286,5 @@ export default function MockData() {
 		</TabPanel>
 	)
 }
+
+export const runtime = "edge"

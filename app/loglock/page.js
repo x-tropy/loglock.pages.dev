@@ -27,3 +27,5 @@ export default async function DashboardExample() {
 		</>
 	)
 }
+
+export const runtime = "edge"
