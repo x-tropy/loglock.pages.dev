@@ -4,24 +4,9 @@ const withMDX = require("@next/mdx")()
 const nextConfig = {
 	// Configure `pageExtensions`` to include MDX files
 	pageExtensions: ["js", "jsx", "mdx", "ts", "tsx"],
-	// Add support for subdomains
-	async rewrites() {
-		return {
-			beforeFiles: [
-				// if the host is `loglock.extropy.dev`,
-				// this rewrite will be applied
-				{
-					source: "/:path*",
-					has: [
-						{
-							type: "host",
-							value: "loglock.extropy.dev"
-						}
-					],
-					destination: "/loglock/:path*"
-				}
-			]
-		}
+	webpack: config => {
+		config.resolve.alias.canvas = false
+		return config
 	}
 }
 
