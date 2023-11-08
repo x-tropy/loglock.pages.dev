@@ -10,9 +10,6 @@ export default async function DashboardExample() {
 
 	return (
 		<>
-			<Title>
-				<img src='/images/loglock.svg' alt='LogLock logo' />
-			</Title>
 			<Text className='mt-2'>This demo system servers as a proof of concept, showcasing how Ethereum blockchain could be used to enhace transparency of data usages.</Text>
 			<TabGroup className='mt-6' defaultIndex={0}>
 				<TabListClient />
