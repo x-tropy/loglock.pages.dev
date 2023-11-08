@@ -52,7 +52,7 @@ export function FooterAction({ transactionHash }) {
 export function VisitExperiment({ experimentURL }) {
 	return (
 		<Link href={`/loglock/experiment/${experimentURL}`}>
-			<Button icon={CodeIcon} variant='secondary' onClick={() => console.log(experimentURL)}>
+			<Button icon={CodeIcon} variant='secondary'>
 				Vist experiment
 			</Button>
 		</Link>

@@ -1,30 +1,6 @@
 "use client"
 
-import {
-	Text,
-	Button,
-	Select,
-	Callout,
-	SelectItem,
-	Title,
-	TabPanel,
-	Card,
-	Divider,
-	Bold,
-	Flex,
-	Grid,
-	Col,
-	List,
-	ListItem,
-	TextInput,
-	MultiSelect,
-	MultiSelectItem,
-	SearchSelect,
-	SearchSelectItem,
-	Subtitle,
-	Icon,
-	Badge
-} from "@tremor/react"
+import { Text, Button, Select, Callout, SelectItem, Title, TabPanel, Card, Divider, Bold, Flex, Grid, Col, List, ListItem, TextInput, MultiSelect, MultiSelectItem, Icon } from "@tremor/react"
 import { useState, useRef, useEffect } from "react"
 import { RefreshIcon, DocumentAddIcon, CubeTransparentIcon, CheckCircleIcon } from "@heroicons/react/outline"
 import pythonCodeSamples from "@/lib/loglock/pythonCodeSamples"
@@ -286,5 +262,3 @@ export default function MockData() {
 		</TabPanel>
 	)
 }
-
-export const runtime = "edge"

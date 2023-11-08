@@ -23,11 +23,11 @@ export async function postLog_request(prevState, formData) {
 		} = JSON.parse(hashInput)
 
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-		//>>>>>>>>>>>   1.Write to blockchain, get transaction hash
+		//>>>>>>>>>>>   1.Write a log to blockchain, get transaction hash
 		const { transactionHash } = await notarizeLog(hashInput)
 
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-		//>>>>>>>>>>>   2.Write to database
+		//>>>>>>>>>>>   2.Write a log to DB
 		await postLog(
 			JSON.stringify({
 				code,
@@ -59,6 +59,8 @@ export async function postLog_request(prevState, formData) {
 	}
 }
 
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//>>>>>>>>>>>   3. Verify log with blockchain
 export async function verifyLog_request(prevState, formData) {
 	const input = formData.get("hashInput")
 	const { verified } = await verifyLog(input)

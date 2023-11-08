@@ -12,7 +12,6 @@ import { getLogDetails } from "@/lib/loglock/db"
 
 export default async function DisplayProject({ params: { id } }) {
 	const { projectTitle, hashInput, experimentURL, projectType, projectAcronym, organization, dataCategory, timestamp, transactionHash } = await getLogDetails(id, "project")
-	console.log("\n>>>>>>>>>>DisplayProject:", projectTitle, hashInput, experimentURL, projectType, projectAcronym, organization, dataCategory, timestamp, transactionHash, "<<<<<<<<<<\n")
 
 	return (
 		<>
