@@ -53,6 +53,7 @@
     "next-remove-imports": "^1.0.12",
     "react": "^18",
     "react-dom": "^18",
+    "react-iframe": "^1.8.5",
     "react-syntax-highlighter": "^15.5.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"
