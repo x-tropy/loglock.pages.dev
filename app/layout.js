@@ -58,13 +58,13 @@ export default function RootLayout({ children }) {
 						<div>
 							<span>
 								© extropy.dev {new Date().getFullYear()}
-								{", by "}
+								{", produced & maintained by "}
 							</span>
 							<span className=' font-semibold'>Buwei Liao</span>
 							<span className=''>, All rights reserved.</span>
 						</div>
 						<div>
-							<span>Special thx to Cloudflare for its widely-accessible cloud services.</span>
+							<span>Thanks to Cloudflare for its widely-accessible cloud services.</span>
 							<a href='https://www.cloudflare.com/'>
 								<img src='/images/cloudflare.svg' alt='Cloudflare' className='h-6 inline-block ml-2' />{" "}
 							</a>
