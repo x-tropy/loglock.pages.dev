@@ -18,11 +18,11 @@ export default function Layout({ children }) {
 						<nav className='flex items-center space-x-8 text-sm font-medium'>
 							<NavMenus
 								menus={[
-									{ name: "introduction", url: "/introduction" },
-									{ name: "demo system", url: "/" },
-									{ name: "presentation", url: "/presentation" },
-									{ name: "prototype design", url: "/prototype" },
-									{ name: "thesis", url: "/thesis" }
+									{ name: "introduction", url: "introduction" },
+									{ name: "demo system", url: "" },
+									{ name: "presentation", url: "presentation" },
+									{ name: "prototype design", url: "prototype" },
+									{ name: "thesis", url: "thesis" }
 								]}
 							/>
 						</nav>

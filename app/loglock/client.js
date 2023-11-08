@@ -15,12 +15,18 @@ export function TabListClient() {
 }
 
 export function NavMenus({ menus }) {
-	let activeMenu = usePathname().split("/").pop()
-	if (activeMenu === "loglock") activeMenu = ""
+	return menus.map((item, index) => <ActiveLink key={index} item={item} />)
+}
 
-	return menus.map((item, index) => (
-		<Link className={`capitalize transition-colors hover:text-foreground/80 text-foreground${activeMenu === item.url.slice(1) ? "" : "/60"}`} href={`/loglock${item.url}`} key={index}>
+function ActiveLink({ item }) {
+	let pathname = usePathname().split("/").pop()
+	if (pathname == "loglock") pathname = ""
+	const appendClass = pathname == item.url ? "text-foreground" : "text-foreground/60"
+	const baseClass = "capitalize transition-colors hover:text-foreground/80 "
+	const className = baseClass + appendClass
+	return (
+		<Link className={className} href={`/loglock/${item.url}`}>
 			{item.name}
 		</Link>
-	))
+	)
 }
