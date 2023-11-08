@@ -34,7 +34,7 @@ export default function VerificationTool() {
 					Just paste the log item here and get verification result from the Ethereum smart contract ➜{" "}
 					<Link href={"https://sepolia.etherscan.io/address/0xd078377970eA26c29FeFa1410018A84ed861cc21#code"}>LogProof</Link>
 				</Text>
-				<form action={formAction}>
+				<form action={formAction} name='verifyForm'>
 					<textarea
 						placeholder='Input content'
 						name='hashInput'

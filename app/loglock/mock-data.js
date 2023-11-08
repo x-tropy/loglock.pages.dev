@@ -121,7 +121,7 @@ export default function MockData() {
 			<Grid numItems={1} numItemsLg={3} className='gap-4'>
 				<Col numColSpan={1} numColSpanLg={2}>
 					<Card>
-						<form action={formAction}>
+						<form action={formAction} name='newLogForm'>
 							<Title>Create new project</Title>
 							<Grid numItems={2} className='gap-4'>
 								<Col numColSpan={1}>
