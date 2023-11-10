@@ -50,11 +50,11 @@ export default function page() {
 
 const transform = imageUrls =>
 	imageUrls.map(({ folder, urls }) => {
-		const name = folder.split("_").pop()
+		const name = folder.split("_").pop().split("-").join(" ")
 		return {
 			name,
 			submenu: urls.map(url => {
-				const subname = url.split("_").pop().split(".")[0]
+				const subname = url.split("_").pop().split(".")[0].split("-").join(" ")
 				return { name: subname, id: (name + " " + subname).split(" ").join("-"), url }
 			})
 		}
