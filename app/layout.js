@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
 				{children}
 				<Toaster />
 				{/* >>>>>>>>>>>>> Universal Footer <<<<<<<<<<<< */}
-				<footer className='bg-[#3f3f3f] pt-12'>
+				<footer className='bg-[#3f3f3f] pt-12 w-full'>
 					<div className='grid grid-cols-5 gap-8 w-[960px] mx-auto mb-12'>
 						<div className='col-span-2 flex flex-col justify-between'>
 							<div>
