@@ -1,5 +1,5 @@
 import { Title, Text, TabGroup, TabPanels } from "@tremor/react"
-import { TabListClient } from "./client"
+import { TabListClient } from "../client"
 import { getLogList } from "@/lib/loglock/db"
 import ProjectList from "./project-list.js"
 import MockData from "./mock-data.js"

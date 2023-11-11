@@ -1,4 +1,4 @@
-import SideMenu from "@/components/ui/side-menu"
+import Scrollspy from "@/components/ui/scrollspy"
 import fs from "fs"
 import path from "path"
 
@@ -20,11 +20,10 @@ export default function page() {
 	})
 
 	const menus = transform(imageUrls)
-	console.log("\n>>>>>>>>>>", menus, "<<<<<<<<<<\n")
 
 	return (
 		<div className='flex flex-row'>
-			<SideMenu menus={menus} />
+			<Scrollspy menus={menus} />
 
 			<div id='content' className='w-full ml-4 flex flex-col space-y-4  rounded mx-auto'>
 				{menus.map((menu, key) => {

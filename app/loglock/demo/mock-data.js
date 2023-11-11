@@ -12,14 +12,14 @@ import Link from "next/link"
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //>>>>>>>>>>>   Handle form submission
 
-import { postLog_request } from "../actions"
+import { postLog_request } from "../../actions"
 import { useFormState, useFormStatus } from "react-dom"
 
 function SubmitButton({ incomplete }) {
 	const { pending } = useFormStatus()
 	return (
 		<Button disabled={incomplete || pending} variant='primary' icon={DocumentAddIcon} type='submit'>
-			Submit
+			{pending ? "Submitting..." : "Submit"}
 		</Button>
 	)
 }

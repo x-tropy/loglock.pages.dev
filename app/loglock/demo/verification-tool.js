@@ -5,7 +5,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { ShieldCheckIcon, BadgeCheckIcon, ShieldExclamationIcon } from "@heroicons/react/solid"
 import { useFormStatus, useFormState } from "react-dom"
-import { verifyLog_request } from "../actions"
+import { verifyLog_request } from "../../actions"
 
 const initialState = {
 	message: "",
@@ -16,7 +16,7 @@ function SubmitButton() {
 	const { pending } = useFormStatus()
 	return (
 		<Button disabled={pending} type='submit' icon={BadgeCheckIcon}>
-			Verify
+			{pending ? "Verifying..." : "Verify"}
 		</Button>
 	)
 }

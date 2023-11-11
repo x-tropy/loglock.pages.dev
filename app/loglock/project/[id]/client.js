@@ -70,7 +70,7 @@ export function CallOut() {
 
 export function ButtonBack() {
 	return (
-		<Link href='/loglock'>
+		<Link href='/loglock/demo'>
 			<Button iconPosition='left' icon={ArrowCircleLeftIcon}>
 				Back to list
 			</Button>

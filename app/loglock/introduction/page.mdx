@@ -1,13 +1,73 @@
 import { Button } from "@/components/ui/button"
+import Table from "@/components/mdx/table"
+import { Boxes, Presentation } from "lucide-react"
+import Link from "next/link"
 
-# Hello
+# Introduction
 
-## Hello world
+## Background
 
-> Note: This is a note
+In the era of digitalization and following the federal government's data strategy, the healthcare system is now adopting patient-centered management of health data. This is made possible through data protection acts like the [Digital Care Act](https://www.bundesgesundheitsministerium.de/digitale-versorgung-gesetz) (DVG), the [Patient Data Protection Act](https://www.bundesgesundheitsministerium.de/patientendaten-schutz-gesetz) (PDSG), and the [Data Transparency Ordinance](https://www.bundesgesundheitsministerium.de/fileadmin/Dateien/3_Downloads/Gesetze_und_Verordnungen/GuV/D/VO_Datentransparenzverordnung.pdf) (DaTraV), which are legally supported by being incorporated into [§363 SGB V](https://www.gesetze-im-internet.de/sgb_5/__363.html).
 
-```js
-console.log("Hello world")
-```
+Starting from January 2023, individuals can voluntarily contribute their patient care and treatment data to electronic patient files. This process is carried out within the legal framework and requires consent. Additionally, this data can be used for research purposes, marking a significant step forward in healthcare data management.
 
-<Button variant='ghost'>Say hi</Button>
+### Motivation
+
+[SouveMed](https://souvemed.de) ![inline_souvemed](/images/souvemed.png), a transparent and trustworthy data trustee platform aims to securely implement the voluntary sharing of clinical data by individuals. The goal is to promote the availability and use of clinical data for the development of data-driven applications and services by both public and private research, while avoiding ethically and legally questionable links between medical treatment and consent for data usage. The field of sleep medicine serves as a specific application example.
+
+The secured availability of large amounts of data enhances the reproducibility of research results and enables research in the case of rare diseases. Another objective of the project is to improve data quality through standardization and the promotion of data preparation. Negotiations regarding compensation for data contributors in the form of services or monetary benefits, compensation for the data trustee, researchers, or companies for improving data quality or for meaningful aggregation of donated data, will be evaluated to contribute to the development of a business model.
+
+### Solution
+
+The realization of the SouveMed data trustee platform involves several scientific and technical objectives:
+
+1. **Design and Establishment of the Data Trustee Platform:** This goal focuses on creating a repository for managing data management units by a data steward. The technical and organizational structure of such a repository, including decentralized approaches, will be evaluated. The integration of data steward functions, such as data discoverability, data quality enhancement, management of data user intentions, and a matching service, will be incorporated. Negotiations on data access and services will be evaluated using blockchain-based voting procedures.
+
+2. **Integration of Heterogeneous Data Systems via Suitable Infrastructure:** The project aims to connect existing data management and processing systems in clinical settings to the Data Trustee Platform. This involves analyzing current interfaces, data formats, and protocols, and establishing a standardized method for integration.
+
+3. **Advanced and Application-Specific Data Management Units:** This objective involves encapsulating data in management units, protected against unauthorized access and formatted in interoperable standards. Existing containerization frameworks will be evaluated and expanded to include interfaces for data loading, querying, analysis, encryption, attachment of usage conditions and metadata/tags, validation of access requests, and integration of de-identification methods and data quality indicators.
+
+4. **Containerized Data Processing Methods:** The project aims to build an analysis platform for utilizing data based on the Curious-Container approach. The extension of this approach will support analysis procedures for sleep data, considering de-identification possibilities for pseudonymous or anonymous data use.
+
+5. **Application for Managing Own Data Management Units by Data Contributors:** A mobile application will be developed to enable data contributors to manage and provide their data for research. This patient-centric approach emphasizes usability, user-friendly processes, and continuous involvement of data contributors in decision-making.
+
+6. **Evaluation and Testing of the Data Ecosystem:** The involvement of users will be continuous, from initial studies and workshops to evaluate requirements, through interim evaluations using demonstrators and prototypes, to the final assessment of the entire system. Research questions will address aspects such as data quality enhancement, involvement of data contributors, and container-based data processing methods.
+
+7. **Consideration of Ethical, Legal, and Social Implications (ELSI):** ELSI aspects will be addressed throughout the project, focusing on ethical implications, legal requirements (EU-GDPR, TTDSG), and social considerations. This includes addressing the ethical implications of data release options, ensuring informed consent, and considering patient rights and privacy concerns.
+
+8. **Examination of Legal Frameworks:** The project will consider legal requirements, including EU-GDPR, TTDSG, and domain-specific data protection regulations. Attention will be given to patient consent and information design, incorporating security and privacy-by-design approaches in solution development.
+
+## LogLock
+
+[![inline_loglock](/images/loglock.svg)](https://extropy.dev/loglock) is part of the SouveMed project and aims to **transparency of data usage** within the platform. In Europe, data trustee platforms have to comply with General Data Protection Regulation (GDPR). The collected data can only be processed for use within the scope of registered purposes if the data subject has previously given consent. Moreover, data donors should be able to exercise all of their rights under the GDPR – accessing data, changing approvals, exporting data, having data erased, etc. – via the platform and see at any time for which services they have issued what kind of approvals. Under this legal setting, data trustee need to figure out a way to enhance transparency of data processing within the platform. The increased transparency not only meet legal requirements but also earn more trust from data donators, hence the platform will be able to reach larger datasets and benefit more science researchers.
+
+In order to promote the sustainable development of platforms, it is important for data trustee platforms to proactively disclose information about how donators’ data is being processed. The benefits are manifold. On the one hand, third-party legal enforcement agencies can step in to intervene in a relatively early stage and examine the platform's compliance, rather than after privacy issues have already occurred. On the other hand, it also allows donors to know that their data is being kept in a secure place and is not being used for anything other than its designated purpose. In the meantime, of alleviating existing donors' concerns about data privacy, it can also have the effect of calling for more donors to join in.
+
+### Research questions
+
+The goal of LogLock is to develop the conceptual model and prototype of a log auditing system, which makes the processing of data within the data trustee platform more transparent. In order to achieve the transparency requirement, it is first necessary to collect critical log data and store them in a tamper-evident form. Then, to analyze different stakeholders’ claims for platform transparency and determine types of information to disclose to promote the long-term sustainability of the platform. Finally, to analyze and visualize the log data, and present information that is easy to interpret for different roles.
+
+To solve the transparency problem, I have proposed three research questions in my thesis:
+
+- **RQ1:** How to ensure that audit logs accurately reflect the data processing activities that occur in the platform?
+- **RQ2:** What exactly are the stakeholders’ requirements for transparency, and what kind of information should be extracted from events happened within the platform?
+- **RQ3:** In which way the disclosure of the information is most effective, so that stakeholders can easily access and consume the log information?
+
+In response to RQ1, I have done extensive literature research on the topic of secure logging and auditing. I have implemented the demo system to embody the technology scheme of a tamper-evident logging system secured by blockchain. In response to RQ2, I have identified all stakeholders related to activities within the platform, and done requirement engineering to determine the information that should be disclosed to each stakeholder. In response to RQ3, I have designed a prototype to visualize the log data and tested the effectiveness of the prototype.
+
+To quickly grasp what I have done in this project, you can checkout the slides I used for my thesis defense, and play with the demo system I have implemented.
+
+<div className='flex flex-row my-16 justify-center'>
+	<Button size='lg' className='mr-6' asChild>
+		<Link href='./presentation'>
+			<Presentation className='mr-2' />
+			<span>See the slides</span>
+		</Link>
+	</Button>
+	<Button variant='secondary' size='lg' asChild>
+		<Link href='./'>
+			<Boxes className='mr-2' />
+			<span>Play with demo</span>
+		</Link>
+	</Button>
+</div>

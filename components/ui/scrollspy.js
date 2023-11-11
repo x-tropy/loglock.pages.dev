@@ -58,7 +58,6 @@ export default function ({ menus }) {
 					<h5 className='px-3 mb-1 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900'>{menu.name}</h5>
 					<ul className='flex flex-col text-sm'>
 						{menu.submenu.map((submenu, index) => {
-							console.log("\n>>>>>>>>>>", submenu, "<<<<<<<<<<\n")
 							return (
 								<li
 									key={index}

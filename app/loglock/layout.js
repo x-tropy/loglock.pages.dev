@@ -8,18 +8,19 @@ export default function Layout({ children }) {
 
 			<header className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
 				<div className='container flex h-14 items-center'>
-					<div className='mr-4 flex'>
+					<div className='mr-4 flex items-center'>
 						<Link href='/'>
-							<img className='h-6' src='/images/extropy_home.svg' alt='Extropy' />
+							<img className='h-6 mr-3' src='/images/extropy_home.svg' alt='Extropy' />
 						</Link>
-						<Link href='/loglock' className='mr-4 md:mr-6 flex items-center'>
+						<img className='mr-3' src='/images/slash.svg' alt='slash' />
+						<Link href='/loglock' className='mr-4 md:mr-6'>
 							<img className='h-7 w-auto' src='/images/loglock.svg' alt='LogLock' />
 						</Link>
 						<nav className='flex items-center mr-4 md:space-x-6 text-sm font-medium'>
 							<NavMenus
 								menus={[
 									{ name: "introduction", url: "introduction" },
-									{ name: "demo system", url: "" },
+									{ name: "demo system", url: "demo" },
 									{ name: "presentation", url: "presentation" },
 									{ name: "prototype design", url: "prototype" },
 									{ name: "thesis", url: "thesis" }
