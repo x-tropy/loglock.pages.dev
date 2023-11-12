@@ -1,3 +1,3 @@
 export default function Page() {
-	reutrn(<span>Hello World</span>)
+	return <span>Hello World</span>
 }
