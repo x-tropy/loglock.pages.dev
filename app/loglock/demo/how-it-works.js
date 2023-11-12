@@ -5,13 +5,13 @@ export default function Page() {
 		<Card className='max-w-[52em] md:p-12 mt-6 p-6 mx-auto flex flex-col items-center'>
 			<H1>Generation of a log entry</H1>
 			<P>When a researcher applies for data, or doing experiment with data, a log entry is generated.</P>
-			<img src='/souvemed/generate-log-entry.png' className='my-6' />
+			<img src='/diagrams/generate-log-entry.png' className='my-6' />
 			<H1>Explain core information</H1>
 			<P>The core information is comprised of the most important aspects of a data usage record.</P>
-			<img src='/souvemed/explain-hashinput.png' className='my-6' />
+			<img src='/diagrams/explain-hashinput.png' className='my-6' />
 			<H1>Where does it come from</H1>
 			<P>Core information comes form the step-by-step hashing of data fields from original log entry.</P>
-			<img src='/souvemed/hashing-order.png' className='my-6' />
+			<img src='/diagrams/hashing-order.png' className='my-6' />
 		</Card>
 	)
 }
