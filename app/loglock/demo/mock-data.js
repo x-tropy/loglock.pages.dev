@@ -12,7 +12,7 @@ import Link from "next/link"
 //>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 //>>>>>>>>>>>   Handle form submission
 
-import { postLog_request } from "../../actions"
+import { postLog_request } from "@/app/actions"
 import { useFormState, useFormStatus } from "react-dom"
 
 function SubmitButton({ incomplete }) {

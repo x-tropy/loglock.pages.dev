@@ -4,6 +4,7 @@ import { getLogList } from "@/lib/loglock/db"
 import ProjectList from "./project-list.js"
 import MockData from "./mock-data.js"
 import VerificationTool from "./verification-tool.js"
+import HowItWorks from "./how-it-works.js"
 
 export default async function DashboardExample() {
 	const data = await getLogList()
@@ -17,6 +18,7 @@ export default async function DashboardExample() {
 					<ProjectList data={data.reverse()} />
 					<MockData />
 					<VerificationTool />
+					<HowItWorks />
 				</TabPanels>
 			</TabGroup>
 		</>

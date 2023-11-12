@@ -28,7 +28,7 @@ export async function postLog_request(prevState, formData) {
 
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		//>>>>>>>>>>>   2.Write a log to DB
-		await postLog(
+		const result = await postLog(
 			JSON.stringify({
 				code,
 				organization,
@@ -46,6 +46,7 @@ export async function postLog_request(prevState, formData) {
 				transactionHash
 			})
 		)
+		console.log("\n>>>>>>>>>>", result, "<<<<<<<<<<\n")
 
 		//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 		//>>>>>>>>>>>  Revalidate after submission

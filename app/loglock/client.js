@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-import { BeakerIcon, BadgeCheckIcon, TrendingUpIcon, PlusCircleIcon } from "@heroicons/react/outline"
+import { BeakerIcon, BadgeCheckIcon, PlusCircleIcon, AnnotationIcon } from "@heroicons/react/outline"
 import { Tab, TabList } from "@tremor/react"
 import { usePathname } from "next/navigation"
 
@@ -10,6 +10,7 @@ export function TabListClient() {
 			<Tab icon={BeakerIcon}>Project list</Tab>
 			<Tab icon={PlusCircleIcon}>Mock data</Tab>
 			<Tab icon={BadgeCheckIcon}>Verification tool</Tab>
+			<Tab icon={AnnotationIcon}>How it works</Tab>
 		</TabList>
 	)
 }
