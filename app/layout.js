@@ -49,7 +49,7 @@ export default function RootLayout({children}) {
         </header>
         <main className={"px-6 py-8 max-w-screen-2xl min-h-screen mx-auto bg-slate-50"}>{children}</main>
         <footer className='bg-[#3f3f3f] pt-24  w-full'>
-            <div className='grid grid-cols-5 gap-8 max-w-[960px] mx-auto mb-24'>
+            <div className='grid grid-cols-5 md:gap-8 max-w-[960px] mx-auto mb-24'>
                 <div className={'col-span-4 tracking-wide'}>
                     <p className='text-gray-300 italic text-lg relative'><span
                         className='text-[6em] text-gray-500 absolute font-serif -left-12'>“</span> 👋 Hi there!
@@ -57,7 +57,7 @@ export default function RootLayout({children}) {
                         work. If you have any questions about the project or Blockchain-related topics in general,
                         feel free to reach out to me through the following channels 👉</p>
                 </div>
-                <div className='flex-row flex items-center col-span-1'>
+                <div className='flex-col md:flex-row flex items-center col-span-1'>
                     {[
                         {
                             url: "https://github.com/x-tropy",
@@ -74,7 +74,7 @@ export default function RootLayout({children}) {
                     ].map(item => (
                         <Link href={item.url} key={item.url}>
                             <img src={`/images/${item.src}`} alt={item.src}
-                                 className='h-8 w-8 inline-block mr-4 p-1 rounded-sm bg-white'/>
+                                 className='h-8 w-8 inline-block mb-4 md:mr-4 p-1 rounded-sm bg-white'/>
                         </Link>
                     ))}
                 </div>
