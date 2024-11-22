@@ -58,7 +58,7 @@ function VerificationResult({ verified }) {
 	if (verified == true) {
 		return (
 			<div className='my-2'>
-				<Badge size='xl' variant='success' icon={ShieldCheckIcon}>
+				<Badge size='md' variant='success' icon={ShieldCheckIcon}>
 					Verification success!
 				</Badge>
 			</div>

@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default async function DisplayExperiment({ params: { id } }) {
 	const { code, fileHash, projectURL, projectAcronym, organization, virtualResource, dataCategory, timestamp, filePath } = await getLogDetails(id, "experiment")
-	const algorithmFilePath = `https://loglock.extropy.dev/algorithm/${filePath}`
+	const algorithmFilePath = `https://loglock.pages.dev/algorithm/${filePath}`
 
 	return (
 		<>
@@ -57,7 +57,7 @@ export default async function DisplayExperiment({ params: { id } }) {
 						<Bold>File hash</Bold>
 						<Text className='mt-2 mb-4 break-all'>{fileHash}</Text>
 						<Bold>File path</Bold>
-						<Link href={`/loglock/algorithm/${filePath}`}>
+						<Link href={`/algorithm/${filePath}`}>
 							<Text className='mt-2 break-all underline' color='blue'>
 								{algorithmFilePath}
 							</Text>

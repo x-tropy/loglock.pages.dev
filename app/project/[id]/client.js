@@ -3,10 +3,10 @@
 
 "use client"
 import { useState } from "react"
-import { CubeTransparentIcon, ExternalLinkIcon, CodeIcon, InformationCircleIcon, DuplicateIcon, BadgeCheckIcon, BeakerIcon, ArrowCircleLeftIcon } from "@heroicons/react/outline"
+import { CubeTransparentIcon, ArrowTopRightOnSquareIcon, CodeBracketIcon, InformationCircleIcon, DocumentDuplicateIcon, CheckBadgeIcon, BeakerIcon, ArrowLeftCircleIcon } from "@heroicons/react/24/outline"
 import { Icon, Flex } from "@tremor/react"
 import { Badge, Button, Callout } from "@tremor/react"
-import { ShieldCheckIcon, ShieldExclamationIcon } from "@heroicons/react/solid"
+import { ShieldCheckIcon, ShieldExclamationIcon } from "@heroicons/react/24/solid"
 import Link from "next/link"
 
 export function CopyIcon({ content }) {
@@ -21,7 +21,7 @@ export function CopyIcon({ content }) {
 		}, 2000)
 	}
 
-	return <Icon icon={DuplicateIcon} variant='solid' tooltip={tooltip} onClick={copyToClipboard} className='ml-auto cursor-pointer' />
+	return <Icon icon={DocumentDuplicateIcon} variant='solid' tooltip={tooltip} onClick={copyToClipboard} className='ml-auto cursor-pointer' />
 }
 
 export function VerificationStatus() {
@@ -41,7 +41,7 @@ export function FooterAction({ transactionHash }) {
 				</Button>
 			</Link>
 			<Link href='https://emn178.github.io/online-tools/keccak_256.html'>
-				<Button iconPosition='right' icon={ExternalLinkIcon} variant='light'>
+				<Button iconPosition='right' icon={ArrowTopRightOnSquareIcon} variant='light'>
 					Other hash tools
 				</Button>
 			</Link>
@@ -51,8 +51,8 @@ export function FooterAction({ transactionHash }) {
 
 export function VisitExperiment({ experimentURL }) {
 	return (
-		<Link href={`/loglock/experiment/${experimentURL}`}>
-			<Button icon={CodeIcon} variant='secondary'>
+		<Link href={`/experiment/${experimentURL}`}>
+			<Button icon={CodeBracketIcon} variant='secondary'>
 				Vist experiment
 			</Button>
 		</Link>
@@ -70,8 +70,8 @@ export function CallOut() {
 
 export function ButtonBack() {
 	return (
-		<Link href='/loglock/demo'>
-			<Button iconPosition='left' icon={ArrowCircleLeftIcon}>
+		<Link href='/demo'>
+			<Button iconPosition='left' icon={ArrowLeftCircleIcon}>
 				Back to list
 			</Button>
 		</Link>
@@ -80,7 +80,7 @@ export function ButtonBack() {
 
 export function VisitProject({ projectURL }) {
 	return (
-		<Link href={`/loglock/project/${projectURL}`}>
+		<Link href={`/project/${projectURL}`}>
 			<Button icon={BeakerIcon} variant='secondary'>
 				Vist project
 			</Button>

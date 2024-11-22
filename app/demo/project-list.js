@@ -94,14 +94,14 @@ export default function ProjectList({ data }) {
 									</Badge>
 								</TableCell>
 								<TableCell className='gap-5'>
-									<Link href={`/loglock/project/${item.projectURL}`}>
+									<Link href={`/project/${item.projectURL}`}>
 										<Button size='xs' variant='secondary' color='gray'>
 											Visit project
 										</Button>
 									</Link>
 								</TableCell>
 								<TableCell>
-									<Link href={`/loglock/experiment/${item.experimentURL}`}>
+									<Link href={`/experiment/${item.experimentURL}`}>
 										<Button size='xs' variant='secondary' color='gray'>
 											Visit experiments
 										</Button>
