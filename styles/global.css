@@ -74,3 +74,36 @@
     @apply bg-background text-foreground;
   }
 }
+
+/*Inter*/
+@font-face {
+  font-family: 'InterTight';
+  src: url('https://fly.storage.tigris.dev/fonts/Inter/InterTight-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Define the weight range for the variable font */
+  font-style: normal; /* Regular (non-italic) style */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'InterTight';
+  src: url('https://fly.storage.tigris.dev/fonts/Inter/InterTight-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Same weight range */
+  font-style: italic; /* Italic style */
+  font-display: swap;
+}
+
+::-webkit-scrollbar {
+  @apply h-[13px] w-[13px];
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.55);
+}

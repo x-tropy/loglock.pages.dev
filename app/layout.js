@@ -12,20 +12,17 @@ export const fontSans = FontSans({
 export default function RootLayout({ children }) {
 	return (
 		<html lang='en' suppressHydrationWarning>
-			<head />
-			<body className={cn("min-h-screen bg-background font-sans antialiased", fontSans.variable)}>
+			<head ><title>🔒LogLock</title></head>
+			<body className="min-h-screen bg-background tracking-wide font-sans antialiased">
 				{children}
 				<Toaster />
 				{/* >>>>>>>>>>>>> Universal Footer <<<<<<<<<<<< */}
-				<footer className='bg-[#3f3f3f] pt-12 w-full'>
-					<div className='grid grid-cols-5 gap-8 w-[960px] mx-auto mb-12'>
-						<div className='col-span-2 flex flex-col justify-between'>
-							<div>
-								<a href='https://extropy.dev'>
-									<img src='/images/extropy_line.svg' />
-								</a>
+				<footer className='bg-[#3f3f3f] pt-24  w-full'>
+					<div className='grid grid-cols-5 gap-8 w-[960px] mx-auto mb-24'>
+							<div className={'col-span-4 tracking-wide'}>
+								<p className='text-gray-300 italic text-lg relative'><span className='text-[6em] text-gray-500 absolute font-serif -left-12'>“</span> 👋 Hi there! Thanks for stopping by. This companion website is dedicated to explaining my master's thesis work. If you have any questions about the project or data privacy-related topics in general, feel free to reach out to me through the following channels 👉</p>
 							</div>
-							<div className='flex-row flex items-center'>
+							<div className='flex-row flex items-center col-span-1'>
 								{[
 									{
 										url: "https://github.com/x-tropy",
@@ -45,26 +42,18 @@ export default function RootLayout({ children }) {
 									</Link>
 								))}
 							</div>
-						</div>
-						{["fluent", "frontdev", "home"].map(item => (
-							<Link href={"/" + item} key={item}>
-								<div className='col-span-1 p-2 bg-white rounded-lg hover:scale-110 transition ease-in-out' key={item}>
-									<img src={`/images/card_${item}.svg`} />
-								</div>
-							</Link>
-						))}
 					</div>
-					<div className='text-xs text-white h-20 md:h-12 bg-slate-950 flex flex-col md:flex-row md:justify-between justify-evenly items-center px-4'>
+					<div className='border-t border-gray-500 text-xs tracking-wide text-gray-300 h-20 md:h-12 bg-black flex flex-col md:flex-row md:justify-between justify-evenly items-center px-4'>
 						<div>
 							<span>
-								© extropy.dev {new Date().getFullYear()}
-								{", produced & maintained by "}
+								© LogLock {new Date().getFullYear()}
+								{", implemented & maintained by "}
 							</span>
 							<span className=' font-semibold'>Buwei Liao</span>
 							<span className=''>, All rights reserved.</span>
 						</div>
 						<div>
-							<span>Thanks to Cloudflare for its widely-accessible cloud services.</span>
+							<span>Special thanks ♥ to</span>
 							<a href='https://www.cloudflare.com/'>
 								<img src='/images/cloudflare.svg' alt='Cloudflare' className='h-6 inline-block ml-2' />{" "}
 							</a>
