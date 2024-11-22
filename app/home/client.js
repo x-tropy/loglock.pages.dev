@@ -21,12 +21,12 @@ export function NavMenus({ menus }) {
 
 function ActiveLink({ item }) {
 	let pathname = usePathname().split("/").pop()
-	if (pathname == "loglock") pathname = ""
+	if (pathname == "home") pathname = ""
 	const appendClass = pathname == item.url ? "text-foreground" : "text-foreground/60"
 	const baseClass = "capitalize transition-colors hover:text-foreground/80 "
 	const className = baseClass + appendClass
 	return (
-		<Link className={className} href={`/loglock/${item.url}`}>
+		<Link className={className} href={`/home/${item.url}`}>
 			{item.name}
 		</Link>
 	)

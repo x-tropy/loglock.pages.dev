@@ -11,8 +11,8 @@ const nextConfig = {
 				// and before all files including _next/public files which
 				// allows overriding page files
 				{
-					source: "/loglock",
-					destination: "/loglock/introduction"
+					source: "/home",
+					destination: "/home/introduction"
 				}
 			]
 		}

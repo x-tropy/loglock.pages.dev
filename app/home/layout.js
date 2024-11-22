@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { NavMenus } from "app/loglock/client"
+import { NavMenus } from "app/home/client"
 
 export default function Layout({ children }) {
 	return (

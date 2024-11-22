@@ -46,7 +46,7 @@ export default function RootLayout({ children }) {
 								))}
 							</div>
 						</div>
-						{["fluent", "frontdev", "loglock"].map(item => (
+						{["fluent", "frontdev", "home"].map(item => (
 							<Link href={"/" + item} key={item}>
 								<div className='col-span-1 p-2 bg-white rounded-lg hover:scale-110 transition ease-in-out' key={item}>
 									<img src={`/images/card_${item}.svg`} />
