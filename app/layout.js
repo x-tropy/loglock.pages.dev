@@ -49,7 +49,7 @@ export default function RootLayout({children}) {
         </header>
         <main className={"px-6 py-8 max-w-screen-2xl min-h-screen mx-auto bg-slate-50"}>{children}</main>
         <footer className='bg-[#3f3f3f] pt-24  w-full'>
-            <div className='grid grid-cols-5 gap-8 w-[960px] mx-auto mb-24'>
+            <div className='grid grid-cols-5 gap-8 max-w-[960px] mx-auto mb-24'>
                 <div className={'col-span-4 tracking-wide'}>
                     <p className='text-gray-300 italic text-lg relative'><span
                         className='text-[6em] text-gray-500 absolute font-serif -left-12'>“</span> 👋 Hi there!
