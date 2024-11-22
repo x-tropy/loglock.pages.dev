@@ -103,7 +103,7 @@ export default function ProjectList({ data }) {
 								<TableCell>
 									<Link href={`/loglock/experiment/${item.experimentURL}`}>
 										<Button size='xs' variant='secondary' color='gray'>
-											Visit experiment
+											Visit experiments
 										</Button>
 									</Link>
 								</TableCell>
