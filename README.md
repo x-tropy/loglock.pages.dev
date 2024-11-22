@@ -8,6 +8,14 @@
 - [Route handler](https://nextjs.org/docs/app/building-your-application/routing/route-handlers)
 - Heroicons can only be used in **client side**
 
+##  Edge runtime:
+
+- /algorithm/[id]
+- /experiment/[id]
+- /project/[id]
+- /page
+
+
 ## Data structure
 
 - projectURL

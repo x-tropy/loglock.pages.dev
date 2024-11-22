@@ -3,9 +3,9 @@
 import { Callout, TabPanel, Divider, Badge, Card, Button, Title, Text } from "@tremor/react"
 import { useState } from "react"
 import Link from "next/link"
-import { ShieldCheckIcon, BadgeCheckIcon, ShieldExclamationIcon } from "@heroicons/react/solid"
+import { ShieldCheckIcon, CheckBadgeIcon, ShieldExclamationIcon } from "@heroicons/react/24/solid"
 import { useFormStatus, useFormState } from "react-dom"
-import { verifyLog_request } from "../../actions"
+import { verifyLog_request } from "../actions"
 
 const initialState = {
 	message: "",
@@ -15,7 +15,7 @@ const initialState = {
 function SubmitButton() {
 	const { pending } = useFormStatus()
 	return (
-		<Button disabled={pending} type='submit' icon={BadgeCheckIcon}>
+		<Button disabled={pending} type='submit' icon={CheckBadgeIcon}>
 			{pending ? "Verifying..." : "Verify"}
 		</Button>
 	)

@@ -23,7 +23,7 @@ import {
 	SelectItem,
 	TextInput
 } from "@tremor/react"
-import { SearchIcon, OfficeBuildingIcon, LockClosedIcon, BookOpenIcon } from "@heroicons/react/outline"
+import { HashtagIcon, BuildingOffice2Icon, LockClosedIcon, BookOpenIcon } from "@heroicons/react/24/outline"
 import Link from "next/link"
 
 export default function ProjectList({ data }) {
@@ -54,7 +54,7 @@ export default function ProjectList({ data }) {
 						<Text>Organization</Text>
 						<MultiSelect className='mt-2' onValueChange={value => setOrganization(value)} value={organization}>
 							{uniqueItems(data.map(row => row.organization)).map((item, i) => (
-								<MultiSelectItem key={i} icon={OfficeBuildingIcon} value={item}>
+								<MultiSelectItem key={i} icon={BuildingOffice2Icon} value={item}>
 									{item}
 								</MultiSelectItem>
 							))}
@@ -62,7 +62,7 @@ export default function ProjectList({ data }) {
 					</Col>
 					<Col className='mt-4' numColSpan={1}>
 						<Text>Keywords</Text>
-						<TextInput className='mt-2' icon={SearchIcon} onChange={e => setSearchString(e.target.value)} value={searchString} />
+						<TextInput className='mt-2' icon={HashtagIcon} onChange={e => setSearchString(e.target.value)} value={searchString} />
 					</Col>
 				</Grid>
 				<Divider />

@@ -2,22 +2,23 @@ import { Button } from "@/components/ui/button"
 import Table from "@/components/mdx/table"
 import { Boxes, Presentation } from "lucide-react"
 import Link from "next/link"
+import {ScaleIcon, HeartIcon, SparklesIcon, KeyIcon, LightBulbIcon, ComputerDesktopIcon, PresentationChartBarIcon } from "@heroicons/react/24/outline"
 
 # Introduction
 
-## Background
+### <ScaleIcon className='size-6 mb-1 inline mr-0.5 text-indigo-500'/> Background
 
 In the era of digitalization and following the federal government's data strategy, the healthcare system is now adopting patient-centered management of health data. This is made possible through data protection acts like the [Digital Care Act](https://www.bundesgesundheitsministerium.de/digitale-versorgung-gesetz) (DVG), the [Patient Data Protection Act](https://www.bundesgesundheitsministerium.de/patientendaten-schutz-gesetz) (PDSG), and the [Data Transparency Ordinance](https://www.bundesgesundheitsministerium.de/fileadmin/Dateien/3_Downloads/Gesetze_und_Verordnungen/GuV/D/VO_Datentransparenzverordnung.pdf) (DaTraV), which are legally supported by being incorporated into [§363 SGB V](https://www.gesetze-im-internet.de/sgb_5/__363.html).
 
 Starting from January 2023, individuals can voluntarily contribute their patient care and treatment data to electronic patient files. This process is carried out within the legal framework and requires consent. Additionally, this data can be used for research purposes, marking a significant step forward in healthcare data management.
 
-### Motivation
+### <HeartIcon className='size-6 mb-1 inline mr-0.5 text-cyan-500'/> Motivation
 
 [SouveMed](https://souvemed.de) ![inline_souvemed](/images/souvemed.png), a transparent and trustworthy data trustee platform aims to securely implement the voluntary sharing of clinical data by individuals. The goal is to promote the availability and use of clinical data for the development of data-driven applications and services by both public and private research, while avoiding ethically and legally questionable links between medical treatment and consent for data usage. The field of sleep medicine serves as a specific application example.
 
 The secured availability of large amounts of data enhances the reproducibility of research results and enables research in the case of rare diseases. Another objective of the project is to improve data quality through standardization and the promotion of data preparation. Negotiations regarding compensation for data contributors in the form of services or monetary benefits, compensation for the data trustee, researchers, or companies for improving data quality or for meaningful aggregation of donated data, will be evaluated to contribute to the development of a business model.
 
-### Solution
+### <SparklesIcon className='size-6 mb-1 inline mr-0.5 text-yellow-500'/> Solution
 
 The realization of the SouveMed data trustee platform involves several scientific and technical objectives:
 
@@ -37,13 +38,13 @@ The realization of the SouveMed data trustee platform involves several scientifi
 
 8. **Examination of Legal Frameworks:** The project will consider legal requirements, including EU-GDPR, TTDSG, and domain-specific data protection regulations. Attention will be given to patient consent and information design, incorporating security and privacy-by-design approaches in solution development.
 
-## LogLock
+### <KeyIcon className='size-6 mb-1 inline mr-0.5 text-violet-500'/> LogLock
 
 [![inline_loglock](/images/loglock.svg)](https://extropy.dev/loglock) is part of the SouveMed project and aims to **transparency of data usage** within the platform. In Europe, data trustee platforms have to comply with General Data Protection Regulation (GDPR). The collected data can only be processed for use within the scope of registered purposes if the data subject has previously given consent. Moreover, data donors should be able to exercise all of their rights under the GDPR – accessing data, changing approvals, exporting data, having data erased, etc. – via the platform and see at any time for which services they have issued what kind of approvals. Under this legal setting, data trustee need to figure out a way to enhance transparency of data processing within the platform. The increased transparency not only meet legal requirements but also earn more trust from data donators, hence the platform will be able to reach larger datasets and benefit more science researchers.
 
 In order to promote the sustainable development of platforms, it is important for data trustee platforms to proactively disclose information about how donators’ data is being processed. The benefits are manifold. On the one hand, third-party legal enforcement agencies can step in to intervene in a relatively early stage and examine the platform's compliance, rather than after privacy issues have already occurred. On the other hand, it also allows donors to know that their data is being kept in a secure place and is not being used for anything other than its designated purpose. In the meantime, of alleviating existing donors' concerns about data privacy, it can also have the effect of calling for more donors to join in.
 
-### Research questions
+### <LightBulbIcon className='size-6 mb-1 inline mr-0.5 text-orange-500'/>  Research questions
 
 The goal of LogLock is to develop the conceptual model and prototype of a log auditing system, which makes the processing of data within the data trustee platform more transparent. In order to achieve the transparency requirement, it is first necessary to collect critical log data and store them in a tamper-evident form. Then, to analyze different stakeholders’ claims for platform transparency and determine types of information to disclose to promote the long-term sustainability of the platform. Finally, to analyze and visualize the log data, and present information that is easy to interpret for different roles.
 
@@ -62,13 +63,13 @@ To quickly grasp what I have done in this project, you can checkout the slides I
 <div className='flex flex-row my-16 justify-center'>
 	<Button size='lg' className='mr-6' asChild>
 		<Link href='/loglock/presentation'>
-			<Presentation className='mr-2' />
+			<PresentationChartBarIcon className='mr-2 size-6' />
 			<span>See the slides</span>
 		</Link>
 	</Button>
 	<Button variant='secondary' size='lg' asChild>
 		<Link href='/loglock/demo'>
-			<Boxes className='mr-2' />
+			<ComputerDesktopIcon className='mr-2 size-6' />
 			<span>Play with demo</span>
 		</Link>
 	</Button>

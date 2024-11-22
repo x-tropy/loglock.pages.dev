@@ -2,7 +2,7 @@
 
 import { Text, Button, Select, Callout, SelectItem, Title, TabPanel, Card, Divider, Bold, Flex, Grid, Col, List, ListItem, TextInput, MultiSelect, MultiSelectItem, Icon } from "@tremor/react"
 import { useState, useRef, useEffect } from "react"
-import { RefreshIcon, DocumentAddIcon, CubeTransparentIcon, CheckCircleIcon } from "@heroicons/react/outline"
+import { ArrowPathIcon, DocumentPlusIcon, CubeTransparentIcon, CheckCircleIcon } from "@heroicons/react/24/outline"
 import pythonCodeSamples from "@/lib/loglock/pythonCodeSamples"
 import { organizations, projectTypes, projectAcronyms, projectTitles, dataCategories, virtualResources, randomPick } from "@/lib/loglock/mockDataFiller"
 import getHash from "@/lib/loglock/getHash"
@@ -18,7 +18,7 @@ import { useFormState, useFormStatus } from "react-dom"
 function SubmitButton({ incomplete }) {
 	const { pending } = useFormStatus()
 	return (
-		<Button disabled={incomplete || pending} variant='primary' icon={DocumentAddIcon} type='submit'>
+		<Button disabled={incomplete || pending} variant='primary' icon={DocumentPlusIcon} type='submit'>
 			{pending ? "Submitting..." : "Submit"}
 		</Button>
 	)
@@ -195,7 +195,7 @@ export default function MockData() {
 							<input type='hidden' name='dataCategory' value={dataCategory} />
 							<Flex justifyContent='center' className='gap-2'>
 								<SubmitButton incomplete={!isFormComplete()} />
-								<Button variant='secondary' icon={RefreshIcon} onClick={autoFill}>
+								<Button variant='secondary' icon={ArrowPathIcon} onClick={autoFill}>
 									Generate mock data
 								</Button>
 							</Flex>
@@ -237,7 +237,7 @@ export default function MockData() {
 						<Divider />
 						<Flex justifyContent='start'>
 							<Bold>Core information</Bold>
-							<Icon icon={RefreshIcon} variant='solid' tooltip='update the JSON string' onClick={updateHashInput} className='ml-auto cursor-pointer' ref={refreshIconRef} />
+							<Icon icon={ArrowPathIcon} variant='solid' tooltip='update the JSON string' onClick={updateHashInput} className='ml-auto cursor-pointer' ref={refreshIconRef} />
 						</Flex>
 						<div className='mt-2' style={{ overflow: "auto" }}>
 							<CodeEditor

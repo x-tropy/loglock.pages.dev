@@ -55,13 +55,13 @@ export default function ({ menus }) {
 		<ul className='flex flex-col w-[240px] h-[calc(100vh-80px)] overflow-y-auto  px-2 rounded sticky top-[90px]'>
 			{menus.map((menu, index) => (
 				<li key={index} className='mb-6'>
-					<h5 className='px-3 mb-1 uppercase tracking-wide font-semibold text-sm lg:text-xs text-gray-900'>{menu.name}</h5>
+					<h5 className='px-3 mb-1 uppercase tracking-wide font-semibold text-xs text-gray-900'>{index + '. ' + menu.name}</h5>
 					<ul className='flex flex-col text-sm'>
 						{menu.submenu.map((submenu, index) => {
 							return (
 								<li
 									key={index}
-									className={`px-3 py-[6px] first-letter:capitalize transition-colors duration-200 relative block hover:text-gray-900 hover:cursor-pointer text-gray-500  hover:rounded-md hover:bg-[#fff] ${
+									className={`px-3 py-1 first-letter:capitalize transition-colors duration-200 relative block hover:text-gray-900 hover:cursor-pointer text-gray-500  hover:rounded-md hover:bg-[#fff] ${
 										activeMenu == submenu.id ? "rounded-md bg-[#fff] shadow-sm text-gray-900" : ""
 									}`}
 									onClick={() => {
