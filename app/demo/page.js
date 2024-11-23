@@ -12,14 +12,14 @@ export default async function DashboardExample() {
 
 	return (
 		<>
-			<div className='max-w-[960px] mt-10 my-16 mx-auto'>
+			<div className='max-w-[960px] px-6  mt-4 mb-10 mx-auto'>
 				<h3 className='text-lg font-semibold mb-2'><ChatBubbleOvalLeftEllipsisIcon
 					className='size-6 mr-1 text-green-600 inline mb-1'/>Just a Demo</h3>
 				<p>This demo system servers as a proof of concept, showcasing how Ethereum
 					blockchain
 					could be used to enhace transparency of data usages.</p>
 			</div>
-			<TabGroup className='mt-6' defaultIndex={0}>
+			<TabGroup className='mt-6 px-6 lg:px-0' defaultIndex={0}>
 				<TabListClient/>
 				<TabPanels>
 					<ProjectList data={data.reverse()}/>

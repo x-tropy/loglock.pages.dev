@@ -31,6 +31,9 @@ const IconMap = {
 function ActiveLink({ item }) {
 	let pathname = usePathname().split("/").pop()
 	if (pathname == "") pathname = "intro"
+	if (['experiment', 'project', 'algorithm'].some(sub => usePathname().includes(sub))) {
+		pathname = "demo";
+	}
 	const appendClass = pathname == item.url ? "text-orange-600" : "text-foreground"
 	const baseClass = "capitalize transition-colors hover:text-orange-600 flex items-center "
 	const className = baseClass + appendClass

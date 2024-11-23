@@ -17,7 +17,7 @@ export default function RootLayout({children}) {
         <Toaster/>
         <header
             className='sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60'>
-            <div className='container flex h-14 items-center'>
+            <div className='container p-6 lg:p-8 flex h-10 lg:h-14 items-center'>
                 <div className='mr-4 flex items-center'>
                     <Link href='/' className='mr-4 md:mr-8'>
                         <img className='h-7 w-auto' src='/images/loglock.svg' alt='LogLock'/>
@@ -36,7 +36,7 @@ export default function RootLayout({children}) {
                 </div>
                 <div className='flex flex-1 items-center space-x-2 justify-end'>
                     <nav className='flex items-center'>
-                        <a target='_blank' rel='noreferrer' href='https://github.com/x-tropy/LogLock_eth'>
+                        <a target='_blank' rel='noreferrer' href='https://github.com/x-tropy/LogLock_Smart_Contract'>
                             <div
                                 className='inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0'>
                                 <img className='h-6 w-6' src='/images/github.svg' alt='GitHub'/>
@@ -47,9 +47,9 @@ export default function RootLayout({children}) {
                 </div>
             </div>
         </header>
-        <main className={"px-6 py-8 max-w-screen-2xl min-h-screen mx-auto bg-slate-50"}>{children}</main>
+        <main className={"lg:px-6 lg:py-8 max-w-screen-2xl min-h-screen mx-auto bg-slate-50"}>{children}</main>
         <footer className='bg-[#3f3f3f] pt-24  w-full'>
-            <div className='grid grid-cols-5 md:gap-8 max-w-[960px] mx-auto mb-24'>
+            <div className='pl-6 grid grid-cols-5 md:gap-8 max-w-[960px] mx-auto mb-24'>
                 <div className={'col-span-4 tracking-wide'}>
                     <p className='text-gray-300 italic text-lg relative'><span
                         className='text-[6em] text-gray-500 absolute font-serif -left-12'>“</span> 👋 Hi there!
@@ -57,7 +57,7 @@ export default function RootLayout({children}) {
                         work. If you have any questions about the project or Blockchain-related topics in general,
                         feel free to reach out to me through the following channels 👉</p>
                 </div>
-                <div className='flex-col md:flex-row flex items-center col-span-1'>
+                <div className='flex-col md:flex-row mt-8 flex items-center col-span-1'>
                     {[
                         {
                             url: "https://github.com/x-tropy",
@@ -81,7 +81,7 @@ export default function RootLayout({children}) {
             </div>
             <div
                 className='border-t border-gray-500 text-xs tracking-wide text-gray-300 h-20 md:h-12 bg-black flex flex-col md:flex-row md:justify-between justify-evenly items-center px-4'>
-                <div>
+                <div className='text-center md:text-left'>
 							<span>
 								© LogLock {new Date().getFullYear()}
                                 {", implemented & maintained by "}

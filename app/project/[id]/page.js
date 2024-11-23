@@ -15,9 +15,9 @@ export default async function DisplayProject({ params: { id } }) {
 
 	return (
 		<>
-			<Flex justifyContent='start' className='mt-4 gap-5'>
+			<Flex justifyContent='start' className='mt-4 px-6 gap-5'>
 				<ButtonBack />
-				<Metric>Project details</Metric>
+				<Metric>Project Details</Metric>
 			</Flex>
 			<Grid numItems={1} numItemsLg={2} className='w-90 mx-auto mt-4 gap-5'>
 				<Col numColSpan={1}>
