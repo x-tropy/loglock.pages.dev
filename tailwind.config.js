@@ -128,7 +128,9 @@ module.exports = {
                 // dark
                 "dark-tremor-input": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
                 "dark-tremor-card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
-                "dark-tremor-dropdown": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)"
+                "dark-tremor-dropdown": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                'elevation-xs': '0 0 0 1px rgba(17,20,24,.15)',
+                'elevation-sm': '0 0 0 1px rgba(17,20,24,.1),0 1px 1px rgba(17,20,24,.2)',
             },
             borderRadius: {
                 "tremor-small": "0.375rem",

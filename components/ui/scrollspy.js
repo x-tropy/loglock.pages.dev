@@ -61,8 +61,8 @@ export default function ({ menus }) {
 							return (
 								<li
 									key={index}
-									className={`px-3 py-1 first-letter:capitalize transition-colors duration-200 relative block hover:text-gray-900 hover:cursor-pointer text-gray-500  hover:rounded-md hover:bg-[#fff] ${
-										activeMenu == submenu.id ? "rounded-md bg-[#fff] shadow-sm text-gray-900" : ""
+									className={`px-3 py-1 first-letter:capitalize transition-colors duration-200 relative block hover:text-orange-600 hover:cursor-pointer text-gray-500  hover:rounded-md hover:bg-[#fff] ${
+										activeMenu == submenu.id ? "rounded-md bg-[#fff] shadow-sm text-orange-600 font-medium" : ""
 									}`}
 									onClick={() => {
 										const menuContent = document.querySelector("#" + submenu.id)

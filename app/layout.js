@@ -36,7 +36,7 @@ export default function RootLayout({children}) {
                 </div>
                 <div className='flex flex-1 items-center space-x-2 justify-end'>
                     <nav className='flex items-center'>
-                        <a target='_blank' rel='noreferrer' href='https://github.com/x-tropy/LogLock_Smart_Contract'>
+                        <a target='_blank' className='rounded shadow-elevation-xs' rel='noreferrer' href='https://github.com/x-tropy/LogLock_Smart_Contract'>
                             <div
                                 className='inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 py-2 w-9 px-0'>
                                 <img className='h-6 w-6' src='/images/github.svg' alt='GitHub'/>
